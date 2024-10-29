@@ -2,7 +2,7 @@
 {
   internal class Program
   {
-    static void Main(string[] args)
+    static void Main()
     {
       Console.WriteLine("calcul des nombres premiers avec le crible d'Ératosthène");
       var result = TrouverNombresPremiers(20_000_000);
@@ -15,7 +15,7 @@
     public static List<int> TrouverNombresPremiers(int limite)
     {
       // Liste pour stocker les nombres premiers
-      List<int> nombresPremiers = new List<int>();
+      List<int> nombresPremiers = new();
 
       // Tableau de booléens pour le crible d'Ératosthène
       bool[] estComposite = new bool[limite + 1];
@@ -46,7 +46,6 @@
       }
 
       return nombresPremiers;
-
     }
   }
 }
